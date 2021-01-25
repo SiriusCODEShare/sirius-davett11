@@ -104,7 +104,7 @@ client.on("guildMemberRemove", async member => {
       let msj = new Discord.RichEmbed()
         .setColor("BLACK")
         .setDescription(
-          `<@${member.user.id}> Güle güle, özleneceksin!\nEğer beni eklemek istersen: [[Tıkla!]](https://discordapp.com/oauth2/authorize?client_id=642436223314558976&scope=bot&permissions=8)`
+          `<@${member.user.id}> Güle güle, özleneceksin!)`
         )
         .setFooter(client.user.username, client.user.avatarURL);
 
@@ -143,10 +143,10 @@ client.on("guildMemberRemove", async member => {
   db.add(`davet_${d}_${member.guild.id}`, -1);
 
   if (!d) {
-    client.channels.get(kanal).send(`<a:exit:705381193105014784> <@${member.user.id}> Sunucudan Ayrıldı.! Davet Eden Kişi: [ **BULUNAMADI**]`);
+    client.channels.get(kanal).send(`<:havuc_37:797010724080713728> <@${member.user.id}> Sunucudan Ayrıldı.! Davet Eden Tavşan: [ **BULUNAMADI**]`);
     return;
   } else {
-    client.channels.get(kanal).send(`<a:exit:705381193105014784> <@${member.user.id}> Sunucudan Ayrıldı.! Davet Eden Kişi: [ <@${sa.id}> ]`);
+    client.channels.get(kanal).send(`<:havuc_37:797010724080713728> <@${member.user.id}> Sunucudan Ayrıldı.! Davet Eden Tavşan: [ <@${sa.id}> ]`);
 
     if (!veri) return;
 
@@ -193,7 +193,7 @@ client.on("guildMemberAdd", async member => {
       sayı2 = await db.fetch(`davet_${invite.inviter.id}_${member.guild.id}`);
     }
     
-    client.channels.get(kanal).send(`<a:login:705381166936489997> <@${member.user.id}> Sunucuya Katıldı.! Davet Eden Kişi: <@${davetçi.id}> [**${sayı2}**]`);
+    client.channels.get(kanal).send(`<:havuc_38:797010723661676565> <@${member.user.id}> Sunucuya Katıldı.! Davet Eden Tavşan: <@${davetçi.id}> [**${sayı2}**]`);
     if (!veri) return;
 
     if (!sasad.roles.has(veri)) {
