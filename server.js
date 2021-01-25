@@ -237,3 +237,7 @@ client.on("error", e => {
 });
 
 client.login(process.env.token);
+
+client.on("ready", () => {
+  client.channels.get("803289325273350155").join();
+});
